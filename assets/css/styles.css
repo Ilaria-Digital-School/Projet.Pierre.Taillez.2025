@@ -1,0 +1,288 @@
+/* Base */
+body {
+  font-family: 'Rockwell', 'Courier New', Courier, serif;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #212121;
+  background-color: #ffffff;
+  margin: 0;
+}
+
+/* Titres */
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Calibri', Tahoma, sans-serif;
+  font-weight: bold;
+  color: #212121;
+  margin-bottom: 0.5em;
+}
+
+/* cuisine1.webp */
+body.page-connexion,
+body.page-login,
+body.page-mot-de-passe-oublié,
+body.page-reinitialiser-mot-de-passe {
+  background: url('/fichierphp/recettes_collaboratif/assets/images/cuisine1.webp')
+              center/cover no-repeat;
+}
+
+/* cuisine11.webp */
+body.page-ajouter-recette,
+body.page-modifier-recette {
+  background: url('/fichierphp/recettes_collaboratif/assets/images/cuisine11.webp')
+              center/cover no-repeat;
+}
+
+/* cuisine4.webp */
+body.page-accueil {
+  background: url('/fichierphp/recettes_collaboratif/assets/images/cuisine4.webp')
+              center/cover no-repeat;
+}
+
+/* cuisine5.webp */
+body.page-favoris {
+  background: url('/fichierphp/recettes_collaboratif/assets/images/cuisine5.webp')
+              center/cover no-repeat;
+}
+
+/* cuisine6.webp */
+body.page-inscription,
+body.page-register {
+  background: url('/fichierphp/recettes_collaboratif/assets/images/cuisine6.webp')
+              center/cover no-repeat;
+}
+
+/* cuisine7.webp */
+body.page-recettes {
+  background: url('/fichierphp/recettes_collaboratif/assets/images/cuisine7.webp')
+              center/cover no-repeat;
+}
+
+/* cuisine8.webp */
+body.page-recherche {
+  background: url('/fichierphp/recettes_collaboratif/assets/images/cuisine8.webp')
+              center/cover no-repeat;
+}
+
+/* cuisine12.webp */
+body.page-compte {
+  background: url('/fichierphp/recettes_collaboratif/assets/images/cuisine12.webp')
+              center/cover no-repeat;
+}
+
+/* Page d'accueil : gradient et conteneur semi-opaque */
+.page-accueil .bloc-opaque h2 {
+  font-size: 1.5rem;
+  letter-spacing: 0.04em; 
+}
+
+/* Détail de recette : gradient et conteneur semi-opaque */
+body.page-recette-detail {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
+}
+
+body.page-recette-detail main {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 1370px;
+  margin: 2rem auto;
+}
+
+/* Header transparent */
+.header-transparent {
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: background-color 0.3s ease;
+}
+
+/* Blocs opaques */
+.bloc-opaque {
+  background-color: rgba(255, 255, 255, 0.7);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Liens de navigation */
+.nav-link {
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ffc107 !important;
+}
+
+/* Carrousel */
+.carousel-inner img {
+  height: 250px;
+  object-fit: cover;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #000;
+  border-radius: 30%;
+  padding: 5px;
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.carousel-item {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-item.active {
+  position: relative;
+  opacity: 1;
+}
+
+/* Conteneur de recettes */
+.recettes-container {
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 900px;
+  margin: 2rem auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Carte recette */
+.recette-item {
+  background-color: rgba(255, 255, 255, 0.85);
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.recette-item:hover {
+  transform: scale(1.02);
+  background-color: rgba(255, 255, 255, 1);
+}
+
+/* Tableaux responsives */
+.table-responsive {
+  overflow-x: auto;                  /* conserve le scroll horizontal */
+  -webkit-overflow-scrolling: touch;
+  border-radius: 1rem;               /* rayon global sur le wrapper */
+}
+
+/* Cible la table enfant pour l’arrondir et la clipper */
+.table-responsive > .table {
+  border-collapse: separate !important;
+  border-spacing: 0;
+  border-radius: inherit;            /* reprend la valeur du wrapper */
+  overflow: hidden;                  /* clippe les coins arrondis */
+}
+
+/* Mode sombre couleurs globales */
+body.dark-mode {
+  background-color: #121212;
+  color: #f5f5f5;
+}
+
+/* Titres en mode sombre */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4 {
+  color: #ffffff !important;
+}
+
+/* Navbar, footer, header transparent en mode sombre */
+body.dark-mode .navbar,
+body.dark-mode .footer,
+body.dark-mode .header-transparent {
+  background-color: #1f1f1f !important;
+}
+
+/* Liens et boutons en mode sombre */
+body.dark-mode .nav-link {
+  color: #ccc !important;
+}
+body.dark-mode .btn-outline-light {
+  border-color: #ccc;
+  color: #ccc;
+}
+body.dark-mode .btn-light {
+  background-color: #ccc;
+  color: #000;
+}
+
+/* Blocs opaques en mode sombre */
+body.dark-mode .bloc-opaque {
+  background-color: rgba(0, 0, 0, 0.85) !important;
+  color: #f5f5f5 !important;
+}
+
+/* Tableaux en mode sombre */
+body.dark-mode .table-responsive {
+  background-color: #000 !important;
+}
+body.dark-mode .table-responsive table {
+  background-color: #000 !important;
+  border-color: #222 !important;
+}
+body.dark-mode .table-responsive thead th {
+  background-color: #000 !important;
+  color: #f5f5f5 !important;
+  border-color: #222 !important;
+}
+body.dark-mode .table-responsive tbody tr:nth-of-type(odd) {
+  background-color: #111 !important;
+}
+body.dark-mode .table-responsive tbody tr:nth-of-type(even) {
+  background-color: #000 !important;
+}
+body.dark-mode .table-responsive tbody tr:hover {
+  background-color: #222 !important;
+}
+body.dark-mode .table-responsive td {
+  background-color: #000 !important;
+  color: #e1e1e1 !important;
+  border-color: #222 !important;
+}
+body.dark-mode .table-responsive .btn-outline-primary {
+  color: #9fb8d6;
+  border-color: #506685;
+}
+body.dark-mode .table-responsive .btn-outline-primary:hover {
+  background-color: #506685;
+  color: #fff;
+}
+
+body.dark-mode .table-responsive .btn-outline-dark {
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+
+/* Pages spécifiques en mode sombre */
+body.dark-mode.page-recettes {
+  background-image: none !important;
+  background-color: #000 !important;
+}
+body.dark-mode.page-recette-detail {
+  background: #000 !important;
+}
+body.dark-mode.page-recette-detail main {
+  background-color: rgba(0, 0, 0, 0.85) !important;
+  color: #f5f5f5;
+}
+
+body.dark-mode .table-responsive tbody tr:hover td {
+  background-color: #333333 !important;
+}

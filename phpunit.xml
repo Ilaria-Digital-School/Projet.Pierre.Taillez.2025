@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/12.0/phpunit.xsd"
+    bootstrap="tests/bootstrap.php"
+    colors="true"
+    executionOrder="depends,defects"
+    cacheDirectory=".phpunit.cache"
+    failOnRisky="true"
+    failOnWarning="true"
+    beStrictAboutOutputDuringTests="true"
+    beStrictAboutChangesToGlobalState="true"
+>
+  <php>
+    <ini name="display_errors"         value="1"/>
+    <ini name="display_startup_errors" value="1"/>
+    <!-- Désactive les notices (E_ALL & ~E_NOTICE) -->
+    <ini name="error_reporting" value="32759"/>
+
+    <!-- Variables d’environnement pour la BDD de test -->
+    <env name="DB_HOST"   value="localhost"/>
+    <env name="DB_USER"   value="test_user"/>
+    <env name="DB_PASS"   value="secret"/>
+    <env name="DB_NAME"   value="ma_base_test"/>
+    <env name="BASE_URI"  value="http://127.0.0.1:8000/"/>
+  </php>
+
+  <testsuites>
+    <!-- Tests unitaires -->
+    <testsuite name="Unit">
+      <directory suffix="Test.php">tests/unit</directory>
+    </testsuite>
+
+    <!-- Tests d’intégration -->
+    <testsuite name="Integration">
+      <directory suffix="Test.php">tests/Integration</directory>
+    </testsuite>
+
+    <!-- Tests fonctionnels (HTTP + Guzzle) -->
+    <testsuite name="Functional">
+      <directory suffix="Test.php">tests/Functional</directory>
+    </testsuite>
+  </testsuites>
+</phpunit>

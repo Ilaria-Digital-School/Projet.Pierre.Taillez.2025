@@ -1,0 +1,131 @@
+/*Adaptation pour tablettes et petits écrans */
+
+/* Tablettes et petits desktops (≤1023px) */
+@media (max-width: 1023px) {
+
+  /* Navbar mobile */
+
+  .navbar-collapse {
+    background-color: #212529;
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+
+  /* Ajustement des polices */
+  body {
+    font-size: 1.15rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  .page-accueil .bloc-opaque h2 {
+    font-size: 1.4rem;
+    letter-spacing: 0.035em;
+  }
+
+  /* Conteneur de recettes */
+  .recettes-container {
+    padding: 1.5rem;
+    max-width: 90%;
+    margin: 1.5rem auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  /* Carrousel */
+  .carousel-inner img {
+    height: 200px;
+  }
+
+  /* Blocs opaques */
+  .bloc-opaque {
+    padding: 1.5rem;
+  }
+
+  /* Détail de recette */
+  body.page-recette-detail main {
+    padding: 1.5rem;
+    margin: 1.5rem;
+  }
+}
+
+
+/* Smartphones et très petits écrans (≤767px) */
+@media (max-width: 767px) {
+
+  /* Ajustement des polices */
+  body {
+    font-size: 1.1rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  .page-accueil .bloc-opaque h2 {
+    font-size: 1.2rem;
+    letter-spacing: 0.03em;
+  }
+
+  /* Conteneur de recettes full-width */
+  .recettes-container {
+    max-width: 100%;
+    padding: 1rem;
+    margin: 1rem 0;
+    grid-template-columns: 1fr;
+  }
+
+  /* Carrousel */
+  .carousel-inner img {
+    height: 150px;
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    padding: 3px;
+  }
+
+  /* Blocs opaques et détails */
+  .bloc-opaque {
+    padding: 1rem;
+  }
+
+  body.page-recette-detail main {
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  /* Navigation & boutons */
+  .nav-link {
+    padding: 0.5rem 1rem;
+  }
+
+  .btn {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Tableaux */
+  .table-responsive table {
+    font-size: 0.9rem;
+  }
+}
